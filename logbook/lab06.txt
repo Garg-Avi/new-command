@@ -1,0 +1,24 @@
+LAB 6 LOGBOOK - Avi garg  - 2601010083
+SETUP: my working directory is /Users/avigarg/nst/labs/labs06-os-and-filesystem
+T1 prediction: I think ls / will show about 20 items
+T1: /bin holds executable commands and binary files 
+T1: /dev holds device and system resource files
+T1: / means root, ~ means home directory, . means current directory
+T1: the OS groups files by function
+T2 prediction: appending after u-w will fail because the user explicitly removed write permissions from themselves
+T2: -rw-r--r-- written in numbers is 644
+T2: ./deploy failed at first because write permission was denied
+T2: the new policy needed chmod +x
+-rwxr-x---  1 avigarg  staff  37 17 Sep 14:45 deploy
+T3 prediction: ./nst-info will fail because it does not have execute permissions yet
+T3 prediction: adding .py to the name will change nothing
+T3: python3 nst-info worked but ./nst-info failed because it lacked execute permission
+T3: renaming the file to .py changed nothing
+T3: file extensions are actually used by applications and users
+T4 prediction: a file called ls in ~/nst/bin will take precedence and run instead of the real ls command
+T4 prediction: a file called ls in ~/nst/bin will take precedence and run instead of the real ls command
+T4: nst-info failed from /tmp because it was not in a directory listed in the PATH variable
+T4: the full path worked because it explicitly points the shell to the file's exact location
+T4: PATH is searched from left to right and stops at the first match found
+T4: my fake ls took over because its directory appeared first in the PATH order
+T4: the PATH change vanished in a new terminal because export changes are session-only and not persistent
